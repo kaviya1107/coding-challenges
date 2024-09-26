@@ -10,4 +10,4 @@ function findMissingNumbers(nums) {
     }
     return missingNumbers;
 }
-console.log(findMissingNumbers([3, 0, 1, 5, 6])); // Output: [2, 4]
+console.log(findMissingNumbers([3, 0, 1, 5, 6, 8])); // Output: [2, 4]
