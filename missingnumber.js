@@ -1,6 +1,13 @@
-function missingNumber(nums) {
-    var expectedSum = (n * (n + 1)) / 2;
-    var actualSum = nums.reduce(function (acc, num) { return acc + num; }, 0);
-    return expectedSum - actualSum;
+function findMissingNumbers(nums) {
+    var maxNum = Math.max.apply(Math, nums); // Find the maximum number in the array
+    var fullSet = new Set(nums); // Store the existing numbers in a set
+    var missingNumbers = [];
+    // Check which numbers from 0 to maxNum are missing
+    for (var i = 0; i <= maxNum; i++) {
+        if (!fullSet.has(i)) {
+            missingNumbers.push(i); // If a number is not in the set, it's missing
+        }
+    }
+    return missingNumbers;
 }
-console.log(missingNumber([3, 0, 1])); // Output: 2
+console.log(findMissingNumbers([3, 0, 1, 5, 6])); // Output: [2, 4]

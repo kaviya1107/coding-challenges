@@ -1,7 +1,14 @@
-function missingNumber(nums: number[]): number {
-    const n = nums.length;
-    const expectedSum = (n * (n + 1)) / 2; //sum of numbers from 0 to 1
-    const actualSum = nums.reduce((acc, num) => acc + num, 0); //sum of  elements in array
-    return expectedSum - actualSum; 
+function findMissingNumbers(nums: number[]): number[] {
+    const maxNum = Math.max(...nums); // Find the maximum number in the array
+    const fullSet = new Set<number>(nums); // Store the existing numbers in a set
+    const missingNumbers: number[] = [];
+    // Check which numbers from 0 to maxNum are missing
+    for (let i = 0; i <= maxNum; i++) {
+        if (!fullSet.has(i)) {
+            missingNumbers.push(i); // If a number is not in the set, it's missing
+        }
+    }
+    return missingNumbers;
 }
-console.log(missingNumber([3, 0, 1]));  // Output: 2
+console.log(findMissingNumbers([3, 0, 1, 5, 6])); // Output: [2, 4]
+
