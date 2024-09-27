@@ -11,3 +11,4 @@ function findMissingNumbers(nums: number[]): number[] {
     return missingNumbers;
 }
 console.log(findMissingNumbers([3, 0, 1, 5, 6,8])); // Output: [2, 4]
+
