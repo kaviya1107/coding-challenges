@@ -2,7 +2,7 @@
 
 Given a string s, return the longest palindromic substring in s.
 Example 1:
-Input: s = "babad"
+Input: s = "babadradar"
 Output: "bab"
 Explanation: "aba" is also a valid answer.
 Example 2:
@@ -19,15 +19,22 @@ Output: "bb" */
 // }
 // console.log(Palindrome("babad"));
 function Palindrome(str) {
-    var reversed = "";
-    for (var i = str.length - 1; i >= 0; i--) {
-        reversed = reversed + str.charAt(i);
+    var longpalindrome = "";
+    for (var i = 0; i < str.length; i++) {
+        for (var j = i + 1; j <= str.length; j++) {
+            var strr = str.substring(i, j);
+            console.log(strr);
+            var reversed = "";
+            for (var i_1 = strr.length - 1; i_1 >= 0; i_1--) {
+                reversed = reversed + strr.charAt(i_1);
+            }
+            if (reversed == strr) {
+                if (longpalindrome.length < reversed.length) {
+                    longpalindrome = reversed;
+                }
+            }
+        }
     }
-    if (reversed == str) {
-        console.log("Palindrome");
-    }
-    else {
-        console.log("Not");
-    }
+    return longpalindrome.length > 0 ? longpalindrome : "Not";
 }
-Palindrome("mom");
+console.log(Palindrome("bbaccradar"));
