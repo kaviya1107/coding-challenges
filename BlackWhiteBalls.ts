@@ -26,7 +26,7 @@ Explanation: All the black balls are already grouped to the right. */
 
 //1 blackball it shold be in last
 function minSwapsToGroupBalls(s: string): number {
-    let onesCount = 0; //2
+    let onesCount = 0; //1
     let swaps = 0;  //1
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '1') {
