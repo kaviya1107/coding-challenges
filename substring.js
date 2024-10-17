@@ -1,3 +1,6 @@
+//Write a JavaScript program that returns a subset of a string.
+//Sample Data: dog
+//Expected Output: ["d", "do", "dog", "o", "og", "g"]
 function substring(str) {
     var subset = [];
     for (var i = 0; i < str.length; i++) {

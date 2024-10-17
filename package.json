@@ -1,5 +1,18 @@
 {
   "devDependencies": {
-    "@types/node": "^22.7.3"
+    "@types/node": "^22.7.6"
+  },
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "main": "BlackWhiteBalls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }

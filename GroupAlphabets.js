@@ -15,5 +15,5 @@ function GroupAlpha(strings) {
     }
     return grouped;
 }
-var res = GroupAlpha(["kavi", "jemi", "nithu"]);
+var res = GroupAlpha(["karthi", "kavi", "jemi", "nithu"]);
 console.log(res);

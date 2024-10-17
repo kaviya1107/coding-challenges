@@ -17,12 +17,13 @@ Input: s = "ACBBD"
 Output: 5
 Explanation: We cannot do any operations on the string so the length remains the same.*/
 function Remove(str) {
-    var previousLength = -1;
-    while (previousLength !== str.length) {
-        previousLength = str.length;
+    // let previousLength = 0;//8
+    // while (previousLength !== str.length) {
+    //     previousLength = str.length;
+    while (true) {
         str = str.replace('AB', '').replace('CD', '');
+        return str.length;
     }
-    return str.length;
 }
-console.log(Remove("ABFCACDB")); // Output: 2
+console.log(Remove("ABFCACDB"));
 console.log(Remove("ACBBD"));

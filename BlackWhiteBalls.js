@@ -24,7 +24,7 @@ Output: 0
 Explanation: All the black balls are already grouped to the right. */
 //1 blackball it shold be in last
 function minSwapsToGroupBalls(s) {
-    var onesCount = 0; //2
+    var onesCount = 0; //1
     var swaps = 0; //1
     for (var i = 0; i < s.length; i++) {
         if (s[i] === '1') {
@@ -37,5 +37,5 @@ function minSwapsToGroupBalls(s) {
     return swaps;
 }
 console.log(minSwapsToGroupBalls("1010")); // Output: 1
-console.log(minSwapsToGroupBalls("100")); // Output: 2
-console.log(minSwapsToGroupBalls("1101001"));
+console.log(minSwapsToGroupBalls("11100")); // Output: 2
+console.log(minSwapsToGroupBalls("1101001")); //Output: 8

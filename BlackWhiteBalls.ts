@@ -37,9 +37,7 @@ function minSwapsToGroupBalls(s: string): number {
     }
     return swaps;
 }
-console.log(minSwapsToGroupBalls("1010"));  // Output: 1
-console.log(minSwapsToGroupBalls("100"));  // Output: 2
+console.log(minSwapsToGroupBalls("1010"));  // Output: 3
+console.log(minSwapsToGroupBalls("11100"));  // Output: 2
 console.log(minSwapsToGroupBalls("1101001")); //Output: 8
- 
-
 

@@ -7,16 +7,16 @@
 //    { a: ['Alf', 'Alice'], b: ['Ben']}
 
 
-function GroupAlpha(strings:string[]):{[key:string]:string[]}{
-    const grouped={};
-    for(const str of strings){
-        const firstletter=str.charAt(0).toLowerCase();
-    if(!grouped[firstletter]){
-        grouped[firstletter]=[];
-    }
-    grouped[firstletter].push(str);
+function GroupAlpha(strings: string[]): { [key: string]: string[] } {
+    const grouped = {};
+    for (const str of strings) {
+        const firstletter = str.charAt(0).toLowerCase();
+        if (!grouped[firstletter]) {
+            grouped[firstletter] = [];
+        }
+        grouped[firstletter].push(str);
     }
     return grouped;
 }
-const res=GroupAlpha(["kavi","jemi","nithu"]);
+const res = GroupAlpha(["karthi","kavi", "jemi", "nithu"]);
 console.log(res);
