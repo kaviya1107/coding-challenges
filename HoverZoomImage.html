@@ -1,0 +1,53 @@
+<!-- Create a Hover Zoom Effect on Images
+Create a gallery of images where:
+When you hover over an image, it zooms in smoothly to fill the screen or the container.
+Add a smooth transition for the zoom effect.
+Key Concepts: Hover effects, transform, scale(), transitions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Zoom Image Gallery</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease; /* Smooth zoom effect */
+}
+.gallery-item:hover img {
+    transform: scale(1.3); /* Zoom by 10% */
+}
+</style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="cart3.jpg" alt="Img 1">
+        </div>
+        <div class="gallery-item">
+            <img src="cart3.jpg" alt="Img 1">
+        </div>
+        <div class="gallery-item">
+            <img src="cart3.jpg" alt="Img 1">
+        </div>
+    </div>
+</body>
+</html>

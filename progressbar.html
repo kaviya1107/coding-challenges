@@ -1,0 +1,63 @@
+<!-- Create a CSS-only Progress Bar
+Build a progress bar that:
+Uses @keyframes animation to show progress.
+The bar should fill up from 0% to 100%.
+Style the bar with different colors for different stages (e.g., red for 0-30%, yellow for 31-70%, green for 71-100%).
+Key Concepts: @keyframes, animation, width, color transitions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgressBar</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.progress-container {
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    width: 0;
+    animation: fillProgress 5s linear infinite;
+}
+@keyframes fillProgress {
+    0% {
+        width: 0%;
+        background-color: red;
+    }
+    30% {
+        width: 30%;
+        background-color: blue;
+    }
+    50% {
+        width: 50%;
+        background-color: yellow;
+    }
+    70% {
+        width: 70%;
+        background-color: pink;
+    }
+    100% {
+        width: 100%;
+        background-color: green;
+    }
+}
+    </style>
+</head>
+<body>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+</body>
+</html>
+
